@@ -11,6 +11,9 @@ class Login(Commonshare):
         # 点击登陆
         self.click("css", "#myForm > div > input[type=button]")
 
+    def alert_text(self):
+        return self.driver.switch_to.alert.text
+
 if __name__ == '__main__':
     login = Login()
     login.login("admin", "admin")
